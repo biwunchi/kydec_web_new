@@ -46,23 +46,25 @@ export default function About() {
               <div
                 key={idx}
                 style={{
-                  backgroundColor: 'white',
+                  backgroundColor: '#F9FAFB',
                   borderRadius: '0.75rem',
                   border: '1px solid #E5E7EB',
                   padding: '2rem',
                   transition: 'all 0.3s',
                 }}
                 onMouseOver={(e) => {
-                  e.currentTarget.style.borderColor = '#93C5FD';
-                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+                  e.currentTarget.style.borderColor = '#3B82F6';
+                  e.currentTarget.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.1)';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
                 }}
                 onMouseOut={(e) => {
                   e.currentTarget.style.borderColor = '#E5E7EB';
                   e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.transform = 'translateY(0)';
                 }}
               >
                 <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{item.icon}</div>
-                <h3 style={{ fontSize: '0.875rem', fontWeight: 'bold', color: '#2563EB', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
+                <h3 style={{ fontSize: '0.875rem', fontWeight: 'bold', color: '#3B82F6', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
                   {item.title}
                 </h3>
                 <p style={{ color: '#4B5563', fontWeight: '600' }}>{item.content}</p>

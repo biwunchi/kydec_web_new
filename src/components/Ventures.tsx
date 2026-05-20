@@ -11,7 +11,6 @@ const ventures = [
     description: '청년 개발자의 시선으로 IT 산업, 교육, 커리어를 다루는 미디어. "AI로 세상을 묻다" 칼럼 시리즈 연재 중.',
     link: 'devtimes.co.kr',
     href: 'https://devtimes.co.kr',
-    featured: true,
   },
   {
     status: 'COMING SOON',
@@ -53,7 +52,7 @@ const ventures = [
 
 export default function Ventures() {
   return (
-    <section id="ventures" style={{ padding: '6rem 2rem', backgroundColor: '#F9FAFB' }}>
+    <section id="ventures" style={{ padding: '6rem 2rem', backgroundColor: 'white' }}>
       <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
         {/* 헤더 */}
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
@@ -82,15 +81,23 @@ export default function Ventures() {
         <div style={{ marginBottom: '2rem' }}>
           <div
             style={{
-              backgroundColor: 'white',
+              backgroundColor: '#F9FAFB',
               borderRadius: '1rem',
-              borderLeft: '4px solid #2563EB',
+              borderLeft: '4px solid #3B82F6',
               padding: '3rem',
               border: '2px solid #BFDBFE',
-              background: 'linear-gradient(to bottom right, #F0F9FF, #E0F2FE)',
               display: 'flex',
               gap: '2rem',
               alignItems: 'flex-start',
+              transition: 'all 0.3s',
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.1)';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.boxShadow = 'none';
+              e.currentTarget.style.transform = 'translateY(0)';
             }}
           >
             <div style={{ fontSize: '4rem', flexShrink: 0 }}>{ventures[0].icon}</div>
@@ -116,7 +123,7 @@ export default function Ventures() {
               <h3 style={{ fontSize: '1.875rem', color: '#111827', marginBottom: '0.5rem', fontWeight: 'bold' }}>
                 {ventures[0].name}
               </h3>
-              <p style={{ color: '#2563EB', fontWeight: '600', marginBottom: '1rem' }}>{ventures[0].tagline}</p>
+              <p style={{ color: '#3B82F6', fontWeight: '600', marginBottom: '1rem' }}>{ventures[0].tagline}</p>
               <p style={{ color: '#4B5563', lineHeight: '1.8', fontSize: '1rem', marginBottom: '1.5rem' }}>
                 {ventures[0].description}
               </p>
@@ -149,19 +156,21 @@ export default function Ventures() {
             <div
               key={index}
               style={{
-                backgroundColor: 'white',
+                backgroundColor: '#F9FAFB',
                 borderRadius: '0.75rem',
                 border: '1px solid #E5E7EB',
                 padding: '2rem',
                 transition: 'all 0.3s',
               }}
               onMouseOver={(e) => {
-                e.currentTarget.style.borderColor = '#10B981';
-                e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+                e.currentTarget.style.borderColor = '#3B82F6';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.1)';
+                e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseOut={(e) => {
                 e.currentTarget.style.borderColor = '#E5E7EB';
                 e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
               <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>{venture.icon}</div>
@@ -183,7 +192,7 @@ export default function Ventures() {
               <h3 style={{ fontSize: '1.5rem', color: '#111827', marginBottom: '0.5rem', fontWeight: 'bold' }}>
                 {venture.name}
               </h3>
-              <p style={{ color: '#10B981', fontWeight: '600', marginBottom: '1rem', fontSize: '0.875rem' }}>
+              <p style={{ color: '#3B82F6', fontWeight: '600', marginBottom: '1rem', fontSize: '0.875rem' }}>
                 {venture.tagline}
               </p>
               <p style={{ color: '#4B5563', lineHeight: '1.6', fontSize: '0.95rem' }}>

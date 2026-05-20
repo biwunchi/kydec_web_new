@@ -35,7 +35,7 @@ const manifestos = [
 
 export default function Manifesto() {
   return (
-    <section style={{ padding: '6rem 2rem', backgroundColor: '#F9FAFB' }}>
+    <section style={{ padding: '6rem 2rem', backgroundColor: 'white' }}>
       <div style={{ maxWidth: '80rem', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <span
@@ -64,25 +64,25 @@ export default function Manifesto() {
             <div
               key={index}
               style={{
-                backgroundColor: 'white',
+                backgroundColor: '#F9FAFB',
                 borderRadius: '0.75rem',
-                borderLeft: '4px solid #2563EB',
+                borderLeft: '4px solid #3B82F6',
                 padding: '1.5rem',
-                boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
+                boxShadow: '0 1px 3px rgba(0,0,0,0.05)',
                 transition: 'all 0.3s',
                 cursor: 'pointer',
               }}
               onMouseOver={(e) => {
-                e.currentTarget.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
-                e.currentTarget.style.backgroundColor = '#F0F9FF';
+                e.currentTarget.style.boxShadow = '0 10px 25px rgba(59, 130, 246, 0.1)';
+                e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseOut={(e) => {
-                e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.1)';
-                e.currentTarget.style.backgroundColor = 'white';
+                e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
+                e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
               <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>{manifesto.icon}</div>
-              <div style={{ fontSize: '0.875rem', fontWeight: 'bold', color: '#2563EB', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+              <div style={{ fontSize: '0.875rem', fontWeight: 'bold', color: '#3B82F6', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
                 {manifesto.number}
               </div>
               <h3 style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#111827', marginBottom: '0.75rem' }}>
