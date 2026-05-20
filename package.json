@@ -1,26 +1,19 @@
 {
   "name": "kydec-web",
   "version": "1.0.0",
-  "description": "KYDEC - Korea Young Developers Cooperative Official Website",
+  "description": "KYDEC - Korea Young Developers Cooperative - Workflow Service Landing",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "python -m http.server 3000",
+    "build": "echo 'Static HTML build'",
+    "start": "python -m http.server 3000"
   },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "^16.0.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.0.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "@types/node": "^20.0.0",
-    "tailwindcss": "^3.4.0",
-    "postcss": "^8.4.0",
-    "autoprefixer": "^10.4.0"
-  }
+  "keywords": [
+    "kydec",
+    "workflow",
+    "collaboration",
+    "ai"
+  ],
+  "author": "KYDEC",
+  "license": "MIT"
 }

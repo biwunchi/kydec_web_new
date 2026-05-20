@@ -1,20 +1,29 @@
-# KYDEC Website
+# KYDEC - Workflow Service Landing
 
 Korea Young Developers Cooperative Official Website
 
-"도구는 AI에게, 의미는 우리에게"
+"6인 팀이 필요한데 사람 대신 AI만 있어도 됩니다."
 
-## Getting Started
+## Quick Start
 
 ```bash
-npm install
+cd /tmp/kydec_web_new
+python -m http.server 3000
+# or
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Visit: `http://localhost:3000`
 
-## About KYDEC
+## Build
 
-KYDEC는 AI 시대를 살아가는 청년 개발자, 기획자, 교육자가 함께 만든 협동조합입니다.
+Static HTML - ready to deploy to Vercel, GitHub Pages, etc.
 
-더 알아보기: https://kydec.kr
+## Deploy
+
+1. Push to GitHub
+2. Connect to Vercel
+3. Set build command: `echo 'Static HTML build'`
+4. Set output directory: `.` (root)
+
+Done!
