@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+}
+
+/* Hero gradient */
+.hero-gradient {
+  background: linear-gradient(135deg, #0A1428 0%, #1a2a4a 100%);
+}
+
+/* Section padding */
+.section-padding {
+  padding: 5rem 2rem;
+}
+
+/* Manifesto card */
+.manifesto-card {
+  @apply border-l-4 border-blue-600 pl-6 py-4;
+}
