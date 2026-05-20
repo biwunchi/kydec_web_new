@@ -1,5 +1,6 @@
 {
   "buildCommand": "echo 'Static build'",
-  "outputDirectory": ".",
-  "cleanUrls": true
+  "outputDirectory": "public",
+  "cleanUrls": true,
+  "trailingSlash": false
 }

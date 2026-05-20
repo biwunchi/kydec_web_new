@@ -1,7 +1,7 @@
 {
   "name": "kydec-web",
   "version": "1.0.0",
-  "description": "KYDEC - Korea Young Developers Cooperative - Workflow Service Landing",
+  "description": "KYDEC - Workflow Service Landing Page",
   "private": true,
   "scripts": {
     "dev": "python -m http.server 3000",
