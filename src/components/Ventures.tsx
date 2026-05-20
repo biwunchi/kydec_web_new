@@ -3,43 +3,49 @@
 const ventures = [
   {
     status: 'NOW OPERATING',
-    statusColor: 'bg-green-100 text-green-800',
+    statusClass: 'badge-live',
+    icon: '📰',
     name: 'DevTimes',
-    subtitle: 'IT 인터넷 신문',
+    tagline: 'IT 미디어',
     description:
       '청년 개발자의 시선으로 IT 산업, 교육, 커리어를 다루는 미디어. "AI로 세상을 묻다" 칼럼 시리즈 연재 중.',
     link: 'devtimes.co.kr',
     href: 'https://devtimes.co.kr',
+    accent: 'from-blue-50 to-cyan-50',
   },
   {
     status: 'COMING SOON',
-    statusColor: 'bg-blue-100 text-blue-800',
+    statusClass: 'badge-coming',
+    icon: '🔍',
     name: 'DevPrism',
-    subtitle: 'IT 교육 선택 전문가 분석 보고서',
+    tagline: 'IT 교육 분석',
     description:
-      'URL 비교 · 분야 추천 · 무료 질문. Claude · GPT · Gemini와 세 개 협동조합(IT전문강사·IT개발자·청년개발자)이 교차 검증한 분석을 24시간 안에 전달합니다.',
+      'URL 비교 · 분야 추천 · 무료 질문. Claude · GPT · Gemini와 세 개 협동조합이 교차 검증한 분석을 24시간 안에 전달합니다.',
   },
   {
     status: 'COMING SOON',
-    statusColor: 'bg-blue-100 text-blue-800',
+    statusClass: 'badge-coming',
+    icon: '🎓',
     name: 'CampTrue',
-    subtitle: '정부지원 부트캠프 비교 플랫폼',
+    tagline: '부트캠프 비교',
     description:
       'HRD-Net 기반 IT 부트캠프 데이터를 AI 감성 분석·키워드 추출로 정리한 비교·추천 서비스.',
   },
   {
     status: 'COMING SOON',
-    statusColor: 'bg-blue-100 text-blue-800',
+    statusClass: 'badge-coming',
+    icon: '🚀',
     name: 'DevReady',
-    subtitle: 'AI 협업 프로젝트 빌더',
+    tagline: 'AI 협업 빌더',
     description:
       '"팀이 안 모여도 프로젝트는 끝난다." AI가 비어 있는 팀 역할을 채워주는 커리어·포트폴리오 빌더.',
   },
   {
     status: 'COMING SOON',
-    statusColor: 'bg-blue-100 text-blue-800',
+    statusClass: 'badge-coming',
+    icon: '✉️',
     name: 'DevTimes Brief',
-    subtitle: '교육·커리어 뉴스레터',
+    tagline: '뉴스레터',
     description:
       '입문자에게 도움이 되는 IT 교육·커리어 큐레이션을 메일로.',
   },
@@ -48,38 +54,67 @@ const ventures = [
 export default function Ventures() {
   return (
     <section id="ventures" className="section-padding bg-gray-50">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-5xl font-bold text-center mb-4">우리가 만드는 것</h2>
-        <p className="text-center text-gray-600 text-lg mb-16 max-w-2xl mx-auto">
-          청년 개발자의 시각으로 기술의 의미를 정의하는 4가지 방식
-        </p>
+      <div className="max-w-6xl mx-auto">
+        {/* 헤더 */}
+        <div className="text-center mb-16">
+          <span className="badge badge-live">우리의 프로젝트</span>
+          <h2 className="heading-2 mt-4 text-gray-900">
+            우리가 만드는 것
+          </h2>
+          <p className="text-gray-600 text-lg mt-4 max-w-2xl mx-auto">
+            청년 개발자의 시각으로 기술의 의미를 정의하는 4가지 방식
+          </p>
+        </div>
 
-        <div className="grid grid-cols-1 gap-6">
-          {ventures.map((venture, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition border-l-4 border-blue-600"
-            >
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <span className={`inline-block px-3 py-1 text-sm font-bold rounded ${venture.statusColor}`}>
-                    {venture.status}
+        {/* 첫 번째 (라이브) - 특별하게 표시 */}
+        <div className="mb-8">
+          <div className="card card-accent bg-gradient-to-br from-blue-50 to-cyan-50 p-8 lg:p-12 border-2 border-blue-200">
+            <div className="flex flex-col lg:flex-row gap-8 items-start">
+              <div className="text-6xl flex-shrink-0">{ventures[0].icon}</div>
+              <div className="flex-grow">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className={`badge ${ventures[0].statusClass}`}>
+                    {ventures[0].status}
                   </span>
-                  <h3 className="text-3xl font-bold text-gray-900 mt-4 mb-2">{venture.name}</h3>
-                  <p className="text-lg text-blue-600 font-semibold">{venture.subtitle}</p>
+                  <p className="text-sm text-emerald-600 font-semibold uppercase tracking-wide">
+                    현재 운영 중
+                  </p>
                 </div>
-                {venture.href && (
-                  <a
-                    href={venture.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded transition text-sm whitespace-nowrap ml-4"
-                  >
-                    방문하기 →
-                  </a>
-                )}
+                <h3 className="heading-3 text-gray-900 mb-2">{ventures[0].name}</h3>
+                <p className="text-blue-600 font-semibold mb-4">{ventures[0].tagline}</p>
+                <p className="text-gray-700 leading-relaxed text-lg mb-6">
+                  {ventures[0].description}
+                </p>
+                <a
+                  href={ventures[0].href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  방문하기 →
+                </a>
               </div>
-              <p className="text-gray-700 leading-relaxed text-lg">{venture.description}</p>
+            </div>
+          </div>
+        </div>
+
+        {/* 준비 중인 서비스들 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {ventures.slice(1).map((venture, index) => (
+            <div key={index} className="card p-8 hover:border-emerald-200">
+              <div className="text-5xl mb-4">{venture.icon}</div>
+              <div className="mb-4">
+                <span className={`badge ${venture.statusClass}`}>
+                  {venture.status}
+                </span>
+              </div>
+              <h3 className="heading-3 text-gray-900 mb-2">{venture.name}</h3>
+              <p className="text-emerald-600 font-semibold mb-4 text-sm">
+                {venture.tagline}
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                {venture.description}
+              </p>
             </div>
           ))}
         </div>
